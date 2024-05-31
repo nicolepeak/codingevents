@@ -24,6 +24,7 @@ public abstract class  AbstractEntity {
         return id == event.id;
     }
 
+
     @Override
     public int hashCode() {
         return Objects.hash(id);
