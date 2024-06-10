@@ -7,7 +7,8 @@ import jakarta.persistence.MappedSuperclass;
 import java.util.Objects;
 
 @MappedSuperclass
-public abstract class  AbstractEntity {
+public abstract class AbstractEntity {
+
     @Id
     @GeneratedValue
     private int id;
@@ -20,13 +21,13 @@ public abstract class  AbstractEntity {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        AbstractEntity event = (AbstractEntity) o;
-        return id == event.id;
+        AbstractEntity entity = (AbstractEntity) o;
+        return id == entity.id;
     }
-
 
     @Override
     public int hashCode() {
         return Objects.hash(id);
     }
+
 }
